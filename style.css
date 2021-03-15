@@ -1,0 +1,134 @@
+html {
+    height: 100%;
+    font-family: helvetica;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+#container {
+    display: grid;
+    width: 500px;
+    height: 700px;
+    border-radius: 15px;
+    background-color: darkgray;
+    align-content: space-around;
+    justify-content: center;
+    grid-template-rows: 180px 480px;
+    grid-template-columns: 500px;
+    align-items: center;
+    justify-items: center;
+}
+
+#spacer {
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 480px;
+    height: 480px;
+    position: relative;
+    /* top: 95px; */
+    background-color: rgb(143, 143, 143);
+    border-radius: 15px;
+}
+
+#button_container {
+    padding: 20px 20px;
+    /* display: flex; */
+    width: 400px;
+    height: 440px;
+    /* flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;  
+    position: relative; */
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.button {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(228, 87, 36);
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    border-radius: 15px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    transition: all 0.15s ease-in-out;
+}
+
+.button p {
+    margin: 0;
+    user-select: none;
+}
+
+.button:hover {
+    background-color: rgb(219, 105, 64);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#display {
+    grid-column: 1;
+    grid-row: 1;
+    border: solid 2px rgb(143, 143, 143);
+    width: 480px;
+    border-radius: 15px;
+    height: 150px;
+    background-color: rgb(25, 25, 25);
+}
+
+#display p {
+    color: white;
+    font-weight: bold;
+    line-height: 150px;
+    margin: 0;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 35px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#button7, #button8, #button9, #buttonmultiply {
+    grid-row: 1;
+}
+#button4, #button5, #button6, #buttondivide {
+    grid-row: 2;
+}
+#button1, #button2, #button3, #buttonminus {
+    grid-row: 3;
+}
+#buttonclear, #button0, #buttonequals, #buttonplus {
+    grid-row: 4;
+}
+#button7, #button4, #button1, #buttonclear {
+    grid-column: 1;
+}
+#button8, #button5, #button2, #button0 {
+    grid-column: 2;
+}
+#button9, #button6, #button3, #buttonequals {
+    grid-column: 3;
+}
+#buttonmultiply, #buttondivide, #buttonplus, #buttonminus {
+    grid-column: 4;
+}
